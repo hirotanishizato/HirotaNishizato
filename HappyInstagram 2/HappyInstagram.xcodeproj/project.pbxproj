@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A195337261D59225D2E7E56 /* Pods_HappyInstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886ED36369B1D0F921771A87 /* Pods_HappyInstagram.framework */; };
+		AC3659422134EE6500F0DF52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3659412134EE6500F0DF52 /* AppDelegate.swift */; };
+		AC3659442134EE6500F0DF52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3659432134EE6500F0DF52 /* ViewController.swift */; };
+		AC3659472134EE6500F0DF52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3659452134EE6500F0DF52 /* Main.storyboard */; };
+		AC3659492134EE6800F0DF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3659482134EE6800F0DF52 /* Assets.xcassets */; };
+		AC36594C2134EE6800F0DF52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC36594A2134EE6800F0DF52 /* LaunchScreen.storyboard */; };
+		AC43ED4B2135BDFA00E22AF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC43ED4A2135BDFA00E22AF7 /* GoogleService-Info.plist */; };
+		AC43ED4F2135BF7200E22AF7 /* SocialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43ED4E2135BF7200E22AF7 /* SocialLoginViewController.swift */; };
+		AC7AEF73213552BC0007165F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7AEF72213552BC0007165F /* SettingViewController.swift */; };
+		AC7AEF75213579D80007165F /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7AEF74213579D80007165F /* EditViewController.swift */; };
+		AC7AEF772135874D0007165F /* SnsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7AEF762135874D0007165F /* SnsViewController.swift */; };
+		ACD441932134F01900943ACF /* camerabutton.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD441872134F01400943ACF /* camerabutton.png */; };
+		ACD441942134F01900943ACF /* fotter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACD441882134F01500943ACF /* fotter.jpg */; };
+		ACD441952134F01900943ACF /* blurback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACD441892134F01600943ACF /* blurback.jpg */; };
+		ACD441962134F01900943ACF /* picture.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD4418A2134F01600943ACF /* picture.png */; };
+		ACD441972134F01900943ACF /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD4418B2134F01700943ACF /* logout.png */; };
+		ACD441982134F01900943ACF /* setProfile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACD4418C2134F01700943ACF /* setProfile.jpg */; };
+		ACD441992134F01900943ACF /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD4418D2134F01700943ACF /* logo.png */; };
+		ACD4419A2134F01900943ACF /* settingtab.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD4418E2134F01800943ACF /* settingtab.png */; };
+		ACD4419B2134F01900943ACF /* shareTwitter.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD4418F2134F01800943ACF /* shareTwitter.png */; };
+		ACD4419C2134F01900943ACF /* change.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD441902134F01800943ACF /* change.png */; };
+		ACD4419D2134F01900943ACF /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD441912134F01900943ACF /* setting.png */; };
+		ACD4419E2134F01900943ACF /* username.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD441922134F01900943ACF /* username.png */; };
+		ACD441A02134F21800943ACF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4419F2134F21800943ACF /* LoginViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C34532666FD528D183C07DF /* Pods-HappyInstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyInstagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyInstagram/Pods-HappyInstagram.debug.xcconfig"; sourceTree = "<group>"; };
+		71FD560DDA20A2FB2209A226 /* Pods-HappyInstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyInstagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyInstagram/Pods-HappyInstagram.release.xcconfig"; sourceTree = "<group>"; };
+		886ED36369B1D0F921771A87 /* Pods_HappyInstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyInstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC36593E2134EE6500F0DF52 /* HappyInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC3659412134EE6500F0DF52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC3659432134EE6500F0DF52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC3659462134EE6500F0DF52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC3659482134EE6800F0DF52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC36594B2134EE6800F0DF52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC36594D2134EE6800F0DF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC43ED4A2135BDFA00E22AF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AC43ED4E2135BF7200E22AF7 /* SocialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginViewController.swift; sourceTree = "<group>"; };
+		AC7AEF72213552BC0007165F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		AC7AEF74213579D80007165F /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		AC7AEF762135874D0007165F /* SnsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnsViewController.swift; sourceTree = "<group>"; };
+		ACD441872134F01400943ACF /* camerabutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camerabutton.png; sourceTree = "<group>"; };
+		ACD441882134F01500943ACF /* fotter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fotter.jpg; sourceTree = "<group>"; };
+		ACD441892134F01600943ACF /* blurback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blurback.jpg; sourceTree = "<group>"; };
+		ACD4418A2134F01600943ACF /* picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picture.png; sourceTree = "<group>"; };
+		ACD4418B2134F01700943ACF /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		ACD4418C2134F01700943ACF /* setProfile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = setProfile.jpg; sourceTree = "<group>"; };
+		ACD4418D2134F01700943ACF /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		ACD4418E2134F01800943ACF /* settingtab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingtab.png; sourceTree = "<group>"; };
+		ACD4418F2134F01800943ACF /* shareTwitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareTwitter.png; sourceTree = "<group>"; };
+		ACD441902134F01800943ACF /* change.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = change.png; sourceTree = "<group>"; };
+		ACD441912134F01900943ACF /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		ACD441922134F01900943ACF /* username.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = username.png; sourceTree = "<group>"; };
+		ACD4419F2134F21800943ACF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC36593B2134EE6500F0DF52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A195337261D59225D2E7E56 /* Pods_HappyInstagram.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A04D17E154C805F46FC5E75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C34532666FD528D183C07DF /* Pods-HappyInstagram.debug.xcconfig */,
+				71FD560DDA20A2FB2209A226 /* Pods-HappyInstagram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC3659352134EE6500F0DF52 = {
+			isa = PBXGroup;
+			children = (
+				AC3659402134EE6500F0DF52 /* HappyInstagram */,
+				AC36593F2134EE6500F0DF52 /* Products */,
+				9A04D17E154C805F46FC5E75 /* Pods */,
+				C84790573B8DC433DBD862BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AC36593F2134EE6500F0DF52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC36593E2134EE6500F0DF52 /* HappyInstagram.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC3659402134EE6500F0DF52 /* HappyInstagram */ = {
+			isa = PBXGroup;
+			children = (
+				ACD441A12134F22200943ACF /* swift */,
+				ACD441862134EFF800943ACF /* image */,
+				AC3659452134EE6500F0DF52 /* Main.storyboard */,
+				AC3659482134EE6800F0DF52 /* Assets.xcassets */,
+				AC36594A2134EE6800F0DF52 /* LaunchScreen.storyboard */,
+				AC36594D2134EE6800F0DF52 /* Info.plist */,
+				AC43ED4A2135BDFA00E22AF7 /* GoogleService-Info.plist */,
+			);
+			path = HappyInstagram;
+			sourceTree = "<group>";
+		};
+		ACD441862134EFF800943ACF /* image */ = {
+			isa = PBXGroup;
+			children = (
+				ACD441892134F01600943ACF /* blurback.jpg */,
+				ACD441872134F01400943ACF /* camerabutton.png */,
+				ACD441902134F01800943ACF /* change.png */,
+				ACD441882134F01500943ACF /* fotter.jpg */,
+				ACD4418D2134F01700943ACF /* logo.png */,
+				ACD4418B2134F01700943ACF /* logout.png */,
+				ACD4418A2134F01600943ACF /* picture.png */,
+				ACD4418C2134F01700943ACF /* setProfile.jpg */,
+				ACD441912134F01900943ACF /* setting.png */,
+				ACD4418E2134F01800943ACF /* settingtab.png */,
+				ACD4418F2134F01800943ACF /* shareTwitter.png */,
+				ACD441922134F01900943ACF /* username.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		ACD441A12134F22200943ACF /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				AC7AEF762135874D0007165F /* SnsViewController.swift */,
+				AC7AEF74213579D80007165F /* EditViewController.swift */,
+				AC7AEF72213552BC0007165F /* SettingViewController.swift */,
+				ACD4419F2134F21800943ACF /* LoginViewController.swift */,
+				AC3659412134EE6500F0DF52 /* AppDelegate.swift */,
+				AC3659432134EE6500F0DF52 /* ViewController.swift */,
+				AC43ED4E2135BF7200E22AF7 /* SocialLoginViewController.swift */,
+			);
+			path = swift;
+			sourceTree = "<group>";
+		};
+		C84790573B8DC433DBD862BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				886ED36369B1D0F921771A87 /* Pods_HappyInstagram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC36593D2134EE6500F0DF52 /* HappyInstagram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC3659502134EE6800F0DF52 /* Build configuration list for PBXNativeTarget "HappyInstagram" */;
+			buildPhases = (
+				666198A9F767B322CAD9ECBF /* [CP] Check Pods Manifest.lock */,
+				AC36593A2134EE6500F0DF52 /* Sources */,
+				AC36593B2134EE6500F0DF52 /* Frameworks */,
+				AC36593C2134EE6500F0DF52 /* Resources */,
+				B7A409ECD8323DFA254DEDA0 /* [CP] Embed Pods Frameworks */,
+				C8977E0B7DA2FB2D92E64BBB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappyInstagram;
+			productName = HappyInstagram;
+			productReference = AC36593E2134EE6500F0DF52 /* HappyInstagram.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC3659362134EE6500F0DF52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = hirota.nishizato;
+				TargetAttributes = {
+					AC36593D2134EE6500F0DF52 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = AC3659392134EE6500F0DF52 /* Build configuration list for PBXProject "HappyInstagram" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC3659352134EE6500F0DF52;
+			productRefGroup = AC36593F2134EE6500F0DF52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC36593D2134EE6500F0DF52 /* HappyInstagram */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC36593C2134EE6500F0DF52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACD441932134F01900943ACF /* camerabutton.png in Resources */,
+				ACD4419A2134F01900943ACF /* settingtab.png in Resources */,
+				AC43ED4B2135BDFA00E22AF7 /* GoogleService-Info.plist in Resources */,
+				ACD441992134F01900943ACF /* logo.png in Resources */,
+				ACD441962134F01900943ACF /* picture.png in Resources */,
+				ACD4419C2134F01900943ACF /* change.png in Resources */,
+				ACD441952134F01900943ACF /* blurback.jpg in Resources */,
+				AC36594C2134EE6800F0DF52 /* LaunchScreen.storyboard in Resources */,
+				ACD4419D2134F01900943ACF /* setting.png in Resources */,
+				ACD441942134F01900943ACF /* fotter.jpg in Resources */,
+				AC3659492134EE6800F0DF52 /* Assets.xcassets in Resources */,
+				AC3659472134EE6500F0DF52 /* Main.storyboard in Resources */,
+				ACD441982134F01900943ACF /* setProfile.jpg in Resources */,
+				ACD4419B2134F01900943ACF /* shareTwitter.png in Resources */,
+				ACD441972134F01900943ACF /* logout.png in Resources */,
+				ACD4419E2134F01900943ACF /* username.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		666198A9F767B322CAD9ECBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HappyInstagram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7A409ECD8323DFA254DEDA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HappyInstagram/Pods-HappyInstagram-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyInstagram/Pods-HappyInstagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8977E0B7DA2FB2D92E64BBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HappyInstagram/Pods-HappyInstagram-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyInstagram/Pods-HappyInstagram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC36593A2134EE6500F0DF52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC43ED4F2135BF7200E22AF7 /* SocialLoginViewController.swift in Sources */,
+				AC7AEF75213579D80007165F /* EditViewController.swift in Sources */,
+				ACD441A02134F21800943ACF /* LoginViewController.swift in Sources */,
+				AC3659442134EE6500F0DF52 /* ViewController.swift in Sources */,
+				AC7AEF772135874D0007165F /* SnsViewController.swift in Sources */,
+				AC3659422134EE6500F0DF52 /* AppDelegate.swift in Sources */,
+				AC7AEF73213552BC0007165F /* SettingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AC3659452134EE6500F0DF52 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC3659462134EE6500F0DF52 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC36594A2134EE6800F0DF52 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC36594B2134EE6800F0DF52 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC36594E2134EE6800F0DF52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC36594F2134EE6800F0DF52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC3659512134EE6800F0DF52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C34532666FD528D183C07DF /* Pods-HappyInstagram.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4JQUDN5GM;
+				INFOPLIST_FILE = HappyInstagram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hirota.nishizato.HappyInstagram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC3659522134EE6800F0DF52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71FD560DDA20A2FB2209A226 /* Pods-HappyInstagram.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4JQUDN5GM;
+				INFOPLIST_FILE = HappyInstagram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hirota.nishizato.HappyInstagram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC3659392134EE6500F0DF52 /* Build configuration list for PBXProject "HappyInstagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC36594E2134EE6800F0DF52 /* Debug */,
+				AC36594F2134EE6800F0DF52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC3659502134EE6800F0DF52 /* Build configuration list for PBXNativeTarget "HappyInstagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC3659512134EE6800F0DF52 /* Debug */,
+				AC3659522134EE6800F0DF52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC3659362134EE6500F0DF52 /* Project object */;
+}

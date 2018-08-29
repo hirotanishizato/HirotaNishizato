@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>262882055251-90ek5sg1s2dju2rtl4rbm5l1p26quns2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.262882055251-90ek5sg1s2dju2rtl4rbm5l1p26quns2</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAbbQWLf0ZiCMhv5jM-t4GVyKxazpy5ejc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>262882055251</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hirota.nishizato.Viv</string>
+	<key>PROJECT_ID</key>
+	<string>viv-app-ce54b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>viv-app-ce54b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:262882055251:ios:d8c6d6b82f367b23</string>
+	<key>DATABASE_URL</key>
+	<string>https://viv-app-ce54b.firebaseio.com</string>
+</dict>
+</plist>

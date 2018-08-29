@@ -13,10 +13,19 @@ class Firebase2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //firebaseから取得
+        /*
+        //firebaseから取得エラー
         let defaultLabel1 = ref.child("user/01/price")
         defaultLabel1.observe(.value){
             (snap: DataSnapshot) in self.TextLabel1.text = (snap.value! as AnyObject).description}
+        */
+    }
+    
+    func loadAllData(){
+        //更新中にインディケーターを回す
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        let firebase = Database.database().reference(fromURL:"https://liviv-a23ee.firebaseio.com/").child("Posts")
+        
     }
     
     override func didReceiveMemoryWarning() {
