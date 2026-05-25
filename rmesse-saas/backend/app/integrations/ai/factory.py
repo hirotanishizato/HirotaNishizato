@@ -13,8 +13,9 @@ def get_ai_provider() -> AIProvider:
             return MockAIProvider()
         return OpenAIProvider()
     if settings.ai_provider == "gemini":
-        # 将来実装: GeminiProvider
         if not settings.gemini_api_key:
             return MockAIProvider()
-        raise NotImplementedError("Gemini provider not implemented yet; please use openai or set GEMINI_API_KEY when implemented")
+        # 遅延importでGoogle SDK未インストール環境でも他プロバイダは動く
+        from app.integrations.ai.gemini_provider import GeminiProvider
+        return GeminiProvider()
     return MockAIProvider()

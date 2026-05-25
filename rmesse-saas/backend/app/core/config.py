@@ -1,7 +1,6 @@
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -13,9 +12,12 @@ class Settings(BaseSettings):
 
     database_url: str = "sqlite:///./dev.db"
 
-    jwt_secret: str = "change-me"
+    jwt_secret: str = "change-me"  # noqa: S105 - dev default, override via env in production
     jwt_algorithm: str = "HS256"
     access_token_expire_minutes: int = 1440
+
+    # 秘匿情報（RMS資格情報等）の暗号化キー (Fernet)。未設定時は jwt_secret から派生。
+    secret_encryption_key: str = ""
 
     ai_provider: Literal["openai", "gemini"] = "openai"
     ai_model: str = "gpt-4o-mini"

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from app.core.config import get_settings
+from app.core.crypto import decrypt
 from app.integrations.rms.base import RMSProvider
 from app.integrations.rms.mock import MockRMSProvider
 from app.integrations.rms.rakuten import RakutenRMSProvider
@@ -14,13 +15,16 @@ def get_rms_provider(shop: Shop) -> RMSProvider:
     """
     settings = get_settings()
 
-    if settings.rms_mock_mode or not shop.rms_service_secret or not shop.rms_license_key:
+    secret = decrypt(shop.rms_service_secret)
+    license_key = decrypt(shop.rms_license_key)
+
+    if settings.rms_mock_mode or not secret or not license_key:
         return MockRMSProvider(shop_code=shop.shop_code)
 
     if shop.platform == "rakuten":
         return RakutenRMSProvider(
-            service_secret=shop.rms_service_secret,
-            license_key=shop.rms_license_key,
+            service_secret=secret,
+            license_key=license_key,
             shop_code=shop.shop_code,
             api_base=settings.rms_api_base,
         )

@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
 from app.api.v1 import (
+    auth,
     delivery_rules,
     drafts,
     inquiries,
@@ -11,6 +12,7 @@ from app.api.v1 import (
 )
 
 api_router = APIRouter()
+api_router.include_router(auth.router, prefix="/auth", tags=["auth"])
 api_router.include_router(organizations.router, prefix="/organizations", tags=["organizations"])
 api_router.include_router(shops.router, prefix="/shops", tags=["shops"])
 api_router.include_router(inquiries.router, prefix="/inquiries", tags=["inquiries"])

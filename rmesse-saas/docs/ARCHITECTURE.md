@@ -80,13 +80,14 @@
 
 ## SaaS化に向けたTODO
 
-- [ ] JWT認証ミドルウェア + Organizationスコープのフィルタ強制
-- [ ] RMS資格情報の暗号化 (Fernet / KMS)
+- [x] JWT認証ミドルウェア + Organizationスコープのフィルタ強制
+- [x] RMS資格情報の暗号化 (Fernet)
+- [x] Gemini Provider 実装
 - [ ] レートリミット (slowapi)
 - [ ] 利用量計測 (AI APIトークン課金のため)
 - [ ] バックグラウンドジョブ (Celery + Redis): 問い合わせポーリングの定期化
 - [ ] Webhook対応: RMS から push されたら即取り込み
 - [ ] 監査ログ (誰が・いつ・どの下書きを送信したか)
 - [ ] 多言語対応 (英語UI)
-- [ ] Gemini Provider 実装
+- [ ] 暗号鍵のKMS連携（現状は環境変数）
 - [ ] 商品ページのスクレイピングを robots.txt 準拠 / キャッシュ強化

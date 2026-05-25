@@ -32,7 +32,7 @@ logger = logging.getLogger(__name__)
 
 
 def _build_auth_header(service_secret: str, license_key: str) -> str:
-    token = base64.b64encode(f"{service_secret}:{license_key}".encode("utf-8")).decode("ascii")
+    token = base64.b64encode(f"{service_secret}:{license_key}".encode()).decode("ascii")
     return f"ESA {token}"
 
 

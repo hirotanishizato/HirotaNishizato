@@ -1,7 +1,7 @@
 """開発用モック実装。RMS APIキーが無くてもアプリの挙動を確認できる。"""
 from __future__ import annotations
 
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 from app.integrations.rms.base import (
     InquiryDTO,
@@ -13,7 +13,7 @@ from app.integrations.rms.base import (
 
 
 def _now() -> datetime:
-    return datetime.now(timezone.utc)
+    return datetime.now(UTC)
 
 
 class MockRMSProvider(RMSProvider):

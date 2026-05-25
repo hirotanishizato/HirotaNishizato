@@ -5,7 +5,7 @@
 """
 from __future__ import annotations
 
-from datetime import date, datetime, timezone
+from datetime import UTC, date, datetime
 
 from app.models.delivery_rule import DeliveryRule
 
@@ -46,4 +46,4 @@ def select_applicable_rules(
 
 
 def reference_today() -> date:
-    return datetime.now(timezone.utc).astimezone().date()
+    return datetime.now(UTC).astimezone().date()

@@ -1,13 +1,32 @@
+import { auth } from './auth';
+
 const BASE = '/api/v1';
 
+export class ApiError extends Error {
+  constructor(public status: number, message: string) {
+    super(message);
+  }
+}
+
 async function req<T>(path: string, init?: RequestInit): Promise<T> {
+  const token = auth.getToken();
   const r = await fetch(`${BASE}${path}`, {
     cache: 'no-store',
-    headers: { 'Content-Type': 'application/json', ...(init?.headers || {}) },
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...(init?.headers || {}),
+    },
     ...init,
   });
   if (!r.ok) {
-    throw new Error(`API ${r.status}: ${await r.text()}`);
+    if (r.status === 401 && typeof window !== 'undefined') {
+      auth.clear();
+      if (window.location.pathname !== '/login') {
+        window.location.href = '/login';
+      }
+    }
+    throw new ApiError(r.status, `API ${r.status}: ${await r.text()}`);
   }
   if (r.status === 204) return undefined as T;
   return r.json();
@@ -95,4 +114,13 @@ export type DeliveryRule = {
   notes: string | null;
   is_active: boolean;
   priority: number;
+};
+
+export type CurrentUser = {
+  id: number;
+  organization_id: number;
+  email: string;
+  name: string;
+  role: 'owner' | 'admin' | 'operator' | 'viewer';
+  is_active: boolean;
 };

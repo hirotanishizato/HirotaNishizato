@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from sqlalchemy import DateTime, MetaData
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
@@ -13,7 +13,7 @@ NAMING_CONVENTION = {
 
 
 def _utcnow() -> datetime:
-    return datetime.now(timezone.utc)
+    return datetime.now(UTC)
 
 
 class Base(DeclarativeBase):
