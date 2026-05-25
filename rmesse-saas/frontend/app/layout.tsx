@@ -21,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/templates" className="hover:text-black">テンプレート</Link>
               <Link href="/manuals" className="hover:text-black">マニュアル</Link>
               <Link href="/delivery-rules" className="hover:text-black">納期ルール</Link>
+              <Link href="/usage" className="hover:text-black">利用状況</Link>
               <Link href="/settings" className="hover:text-black">設定</Link>
             </nav>
             <LogoutButton />

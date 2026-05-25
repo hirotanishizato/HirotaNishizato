@@ -19,6 +19,9 @@ from app.db.session import get_db  # noqa: E402
 from app.main import app  # noqa: E402
 from app.models import *  # noqa: E402,F401,F403
 
+# テスト中はレートリミットを無効化（fixtureが多数の signup を行うため）
+app.state.limiter.enabled = False
+
 _engine = create_engine(os.environ["DATABASE_URL"], connect_args={"check_same_thread": False})
 TestingSession = sessionmaker(bind=_engine, autoflush=False, autocommit=False)
 

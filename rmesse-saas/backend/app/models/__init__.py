@@ -1,3 +1,5 @@
+from app.models.ai_usage import AIUsage
+from app.models.audit_log import AuditLog
 from app.models.delivery_rule import DeliveryRule
 from app.models.draft import Draft, DraftStatus
 from app.models.inquiry import Inquiry, InquiryStatus
@@ -10,6 +12,8 @@ from app.models.template import Template
 from app.models.user import User, UserRole
 
 __all__ = [
+    "AIUsage",
+    "AuditLog",
     "DeliveryRule",
     "Draft",
     "DraftStatus",

@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user
@@ -9,6 +9,7 @@ from app.models.inquiry import Inquiry, InquiryStatus
 from app.models.shop import Shop
 from app.models.user import User
 from app.schemas.draft import DraftOut, DraftUpdate
+from app.services import audit
 
 router = APIRouter()
 
@@ -56,6 +57,7 @@ def update_draft(
 
 @router.post("/{draft_id}/send", response_model=DraftOut)
 async def send_draft(
+    request: Request,
     draft_id: int,
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
@@ -68,10 +70,29 @@ async def send_draft(
     rms = get_rms_provider(inquiry.shop)
     ok = await rms.send_reply(inquiry.external_id, d.body)
     if not ok:
+        audit.write(
+            action="draft.send",
+            organization_id=user.organization_id,
+            user_id=user.id,
+            target_type="draft",
+            target_id=d.id,
+            success=False,
+            meta={"inquiry_id": inquiry.id, "external_id": inquiry.external_id},
+            request=request,
+        )
         raise HTTPException(502, "Failed to send via RMS")
 
     d.status = DraftStatus.SENT
     inquiry.status = InquiryStatus.REPLIED
     db.commit()
     db.refresh(d)
+    audit.write(
+        action="draft.send",
+        organization_id=user.organization_id,
+        user_id=user.id,
+        target_type="draft",
+        target_id=d.id,
+        meta={"inquiry_id": inquiry.id, "external_id": inquiry.external_id},
+        request=request,
+    )
     return d

@@ -124,3 +124,25 @@ export type CurrentUser = {
   role: 'owner' | 'admin' | 'operator' | 'viewer';
   is_active: boolean;
 };
+
+export type UsageSummary = {
+  organization_id: number;
+  period: string;
+  total_requests: number;
+  total_tokens_in: number;
+  total_tokens_out: number;
+  total_tokens: number;
+  by_provider: Record<string, number>;
+};
+
+export type AuditLogEntry = {
+  id: number;
+  user_id: number | null;
+  action: string;
+  target_type: string | null;
+  target_id: string | null;
+  success: boolean;
+  ip_address: string | null;
+  meta: Record<string, unknown> | null;
+  created_at: string;
+};

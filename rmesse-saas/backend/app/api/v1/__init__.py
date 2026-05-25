@@ -9,6 +9,7 @@ from app.api.v1 import (
     organizations,
     shops,
     templates,
+    usage,
 )
 
 api_router = APIRouter()
@@ -20,3 +21,4 @@ api_router.include_router(drafts.router, prefix="/drafts", tags=["drafts"])
 api_router.include_router(templates.router, prefix="/templates", tags=["templates"])
 api_router.include_router(manuals.router, prefix="/manuals", tags=["manuals"])
 api_router.include_router(delivery_rules.router, prefix="/delivery-rules", tags=["delivery-rules"])
+api_router.include_router(usage.router, prefix="/usage", tags=["usage"])

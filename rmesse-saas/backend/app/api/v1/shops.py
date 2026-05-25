@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Request
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user, get_user_shop
@@ -7,6 +7,7 @@ from app.db.session import get_db
 from app.models.shop import Shop
 from app.models.user import User
 from app.schemas.shop import ShopCreate, ShopOut, ShopUpdate
+from app.services import audit
 from app.services.inquiry_sync import sync_inquiries_for_shop
 
 _SECRET_FIELDS = {"rms_service_secret", "rms_license_key"}
@@ -68,16 +69,29 @@ def get_shop(shop: Shop = Depends(get_user_shop)) -> ShopOut:
 
 @router.patch("/{shop_id}", response_model=ShopOut)
 def update_shop(
+    request: Request,
     payload: ShopUpdate,
     shop: Shop = Depends(get_user_shop),
     db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
 ) -> ShopOut:
-    for k, v in payload.model_dump(exclude_unset=True).items():
+    changes = payload.model_dump(exclude_unset=True)
+    touched_secrets = bool(_SECRET_FIELDS & changes.keys() & {k for k, v in changes.items() if v})
+    for k, v in changes.items():
         if k in _SECRET_FIELDS and v:
             v = encrypt(v)
         setattr(shop, k, v)
     db.commit()
     db.refresh(shop)
+    if touched_secrets:
+        audit.write(
+            action="shop.update_credentials",
+            organization_id=user.organization_id,
+            user_id=user.id,
+            target_type="shop",
+            target_id=shop.id,
+            request=request,
+        )
     return _to_out(shop)
 
 
