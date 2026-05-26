@@ -1,4 +1,6 @@
-from sqlalchemy import ForeignKey, String, Text
+from datetime import datetime
+
+from sqlalchemy import DateTime, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base, TimestampMixin
@@ -28,6 +30,12 @@ class Shop(Base, TimestampMixin):
     ai_signature: Mapped[str | None] = mapped_column(Text)  # 末尾の署名
 
     is_active: Mapped[bool] = mapped_column(default=True, nullable=False)
+
+    # 自動同期 (バックグラウンドジョブ)
+    auto_sync_enabled: Mapped[bool] = mapped_column(default=True, nullable=False)
+    last_synced_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    last_sync_count: Mapped[int | None] = mapped_column(Integer)
+    last_sync_error: Mapped[str | None] = mapped_column(Text)
 
     organization: Mapped["Organization"] = relationship(back_populates="shops")  # noqa: F821
     inquiries: Mapped[list["Inquiry"]] = relationship(back_populates="shop", cascade="all,delete")  # noqa: F821

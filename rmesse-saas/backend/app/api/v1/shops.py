@@ -25,7 +25,11 @@ def _to_out(shop: Shop) -> ShopOut:
         ai_persona=shop.ai_persona,
         ai_signature=shop.ai_signature,
         is_active=shop.is_active,
+        auto_sync_enabled=shop.auto_sync_enabled,
         has_rms_credentials=bool(shop.rms_service_secret and shop.rms_license_key),
+        last_synced_at=shop.last_synced_at,
+        last_sync_count=shop.last_sync_count,
+        last_sync_error=shop.last_sync_error,
     )
 
 

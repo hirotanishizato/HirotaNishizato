@@ -71,6 +71,31 @@ export default function SettingsPage() {
       </div>
 
       <div className="bg-white border rounded-lg p-4 space-y-3">
+        <h2 className="font-bold">自動同期</h2>
+        <label className="flex items-center gap-2 text-sm">
+          <input
+            type="checkbox"
+            checked={selected.auto_sync_enabled}
+            onChange={async (e) => {
+              const updated = await api.patch<Shop>(`/shops/${selected.id}`, {
+                auto_sync_enabled: e.target.checked,
+              });
+              setShops(shops.map((s) => (s.id === updated.id ? updated : s)));
+              setSelected(updated);
+            }}
+          />
+          バックグラウンドで定期的にRMSから問い合わせを取得する
+        </label>
+        <div className="text-xs text-gray-500">
+          最終同期: {selected.last_synced_at ? new Date(selected.last_synced_at).toLocaleString('ja-JP') : '未実行'}
+          {selected.last_sync_count !== null && ` / ${selected.last_sync_count}件取得`}
+          {selected.last_sync_error && (
+            <span className="text-red-600"> / エラー: {selected.last_sync_error}</span>
+          )}
+        </div>
+      </div>
+
+      <div className="bg-white border rounded-lg p-4 space-y-3">
         <h2 className="font-bold">RMS 認証情報</h2>
         <div className="text-xs text-gray-500">
           現状: {selected.has_rms_credentials ? '登録済み' : '未登録（モックモード）'}

@@ -76,7 +76,11 @@ export type Shop = {
   ai_persona: string | null;
   ai_signature: string | null;
   is_active: boolean;
+  auto_sync_enabled: boolean;
   has_rms_credentials: boolean;
+  last_synced_at: string | null;
+  last_sync_count: number | null;
+  last_sync_error: string | null;
 };
 
 export type Template = {

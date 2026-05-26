@@ -27,6 +27,10 @@ class Settings(BaseSettings):
     rms_api_base: str = "https://api.rms.rakuten.co.jp"
     rms_mock_mode: bool = True
 
+    # 問い合わせの自動同期（バックグラウンド）
+    scheduler_enabled: bool = True
+    inquiry_sync_interval_seconds: int = 300  # 5分
+
     cors_origins: str = "http://localhost:3000"
 
     @property

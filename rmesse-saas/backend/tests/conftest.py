@@ -13,6 +13,7 @@ _tmp.close()
 os.environ["DATABASE_URL"] = f"sqlite:///{_tmp.name}"
 os.environ["JWT_SECRET"] = "test-secret-key"
 os.environ["RMS_MOCK_MODE"] = "true"
+os.environ["SCHEDULER_ENABLED"] = "false"
 
 from app.db.base import Base  # noqa: E402
 from app.db.session import get_db  # noqa: E402
