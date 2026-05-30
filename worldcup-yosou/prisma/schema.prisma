@@ -1,0 +1,78 @@
+// ワールドカップ2026 予想（擬似ベッティング）サイト
+//
+// 注意: 本サイトは現実の金銭を賭けるものではありません。
+//   ポイント(架空の金額)を用いたゲーム性のための擬似ベッティングです。
+//
+// DB は PostgreSQL（ローカル開発・本番(Render)とも同一でparityを確保）。
+// 状態は移植性のため enum ではなく String + 定数で表現しています。
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// 試合（＝予想テーマ1件）
+model Match {
+  id          String    @id @default(cuid())
+  title       String // 例: 日本 vs カメルーン
+  category    String    @default("") // 大会/グループ/予想テーマ
+  description String    @default("") // 詳細説明
+  kickoffAt   DateTime // 試合開始時刻 ＝ 投票締め切り
+  status      String    @default("OPEN") // OPEN / CLOSED / SETTLED
+  resultNote  String    @default("") // 確定結果の補足（最終スコア等）
+  settledAt   DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  options Option[]
+  bets    Bet[]
+}
+
+/// 投票選択肢（複数設定可能）
+model Option {
+  id        String  @id @default(cuid())
+  matchId   String
+  match     Match   @relation(fields: [matchId], references: [id], onDelete: Cascade)
+  label     String // 例: 日本勝利 / 引き分け / カメルーン勝利 / 2-1
+  sortOrder Int     @default(0)
+  isWinner  Boolean @default(false) // 結果確定時の的中選択肢
+
+  bets Bet[]
+
+  @@index([matchId])
+}
+
+/// 投票（誰がどの選択肢にいくら賭けたか）
+model Bet {
+  id        String   @id @default(cuid())
+  matchId   String
+  match     Match    @relation(fields: [matchId], references: [id], onDelete: Cascade)
+  optionId  String
+  option    Option   @relation(fields: [optionId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userName  String // 表示用の冗長保持（名前ベース）
+  amount    Int // 架空の投票額（ポイント）
+  payout    Int      @default(0) // 確定後の受取総額（的中時）。net = payout - amount
+  isSettled Boolean  @default(false)
+  isHit     Boolean  @default(false) // 的中したか
+  createdAt DateTime @default(now())
+
+  @@index([matchId])
+  @@index([userId])
+  @@index([optionId])
+}
+
+/// ユーザー（名前ベースで一意）
+model User {
+  id        String   @id @default(cuid())
+  name      String   @unique // 名前ベースの一意キー
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  bets Bet[]
+}
