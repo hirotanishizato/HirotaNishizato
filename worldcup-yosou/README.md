@@ -51,20 +51,27 @@
 | フレームワーク | Next.js 16（App Router / Server Actions / Route Handlers） |
 | 言語 | TypeScript |
 | スタイル | Tailwind CSS v4 |
-| DB / ORM | Prisma 7 + ドライバアダプタ |
-| ローカルDB | SQLite（`better-sqlite3` アダプタ） |
-| 本番DB（想定） | PostgreSQL（Vercel Postgres / Neon / Supabase 等） |
+| DB / ORM | Prisma 7 + `@prisma/adapter-pg` |
+| データベース | PostgreSQL（ローカル・本番とも同一でparity確保） |
+| ホスティング（想定） | Render（Web Service + Managed Postgres） |
 
 ---
 
 ## ローカル開発
 
+前提：ローカルに **PostgreSQL** が必要です（未導入なら Docker が手軽）。
+
 ```bash
+# 0.（任意）Docker で使い捨てPostgresを起動する例
+docker run --name wc-pg -e POSTGRES_USER=wc -e POSTGRES_PASSWORD=wc \
+  -e POSTGRES_DB=worldcup -p 5432:5432 -d postgres:16
+
 # 1. 依存をインストール（postinstall で prisma generate も実行されます）
 npm install
 
-# 2. 環境変数を用意
-cp .env.example .env        # 必要に応じて ADMIN_PASSWORD 等を編集
+# 2. 環境変数を用意（DATABASE_URL に自分のPostgres接続文字列を設定）
+cp .env.example .env
+#   例: DATABASE_URL="postgresql://wc:wc@127.0.0.1:5432/worldcup"
 
 # 3. DBを作成（マイグレーション適用）
 npm run db:migrate
@@ -114,30 +121,29 @@ title,category,description,kickoffAt,options
 
 ---
 
-## デプロイ（Vercel / ホスティングは後日設定）
+## デプロイ（Render）
 
-> ホスティング（Vercel）と本番DBのアカウントは**後で用意する前提**のため、現状はローカルSQLITEで動作する“仮”構成です。
-> 本番公開時は以下の手順で Postgres に切り替えてください。
+リポジトリ直下の **`render.yaml`（Blueprint）** で Web Service と Managed Postgres を一括作成できます。
+（このアプリは `worldcup-yosou/` 配下のため、Blueprint では `rootDir: worldcup-yosou` を指定済み）
 
-1. **Postgres を用意**（Vercel Postgres / Neon / Supabase など）し、接続文字列を取得。
-2. **アダプタを追加**：`npm i @prisma/adapter-pg`
-3. **`prisma/schema.prisma`** の datasource を変更：
-   ```prisma
-   datasource db {
-     provider = "postgresql"
-   }
-   ```
-4. **`src/lib/prisma.ts`** を PostgreSQL アダプタに差し替え（ファイル内のコメント参照）：
-   ```ts
-   import { PrismaPg } from "@prisma/adapter-pg";
-   const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });
-   ```
-5. **`prisma/seed.ts`** のアダプタも同様に差し替え（任意）。
-6. **Vercel の環境変数**を設定：
-   - `DATABASE_URL`（Postgres 接続文字列）
-   - `ADMIN_PASSWORD`（管理画面パスワード）
-   - `ADMIN_SECRET`（セッション署名用のランダム文字列）
-7. デプロイ後、`npx prisma migrate deploy` でスキーマを適用。
+1. [Render](https://render.com) にログイン → **New → Blueprint** → このリポジトリを選択。
+2. `render.yaml` が読み込まれ、**Web Service（Next.js）** と **PostgreSQL** が作成されます。
+   - `DATABASE_URL` は作成されたDBから自動注入
+   - `ADMIN_SECRET` は自動生成
+   - ビルド時に `prisma migrate deploy` が走り、スキーマが適用されます
+3. デプロイ後、Web Service の **Environment** で `ADMIN_PASSWORD` を強固な値に設定
+   （未設定でも仮値 `admin2026` で動作します）。
+4. 公開URLにアクセスして動作確認。管理画面は `/admin`。
+
+> **補足**
+> - `free` プランはアイドルでスリープ（初回アクセスが遅い）、無料Postgresは保持期間に制限があります。本番運用は `starter` 以上を推奨。
+> - Web Service と Postgres は**同一リージョン**にしてください（`render.yaml` では `singapore` を指定）。
+> - ダッシュボードから手動構築する場合は、Root Directory を `worldcup-yosou`、Build Command を
+>   `npm ci && npx prisma migrate deploy && npm run build`、Start Command を `npm run start` に設定します。
+
+### 他プラットフォーム（Vercel 等）に変える場合
+サーバーレスでは外部 Postgres（Neon 等）を使い、`DATABASE_URL` / `ADMIN_PASSWORD` / `ADMIN_SECRET` を
+環境変数に設定し、デプロイ時に `prisma migrate deploy` を実行すれば動作します（コード変更は不要）。
 
 ---
 

@@ -34,6 +34,9 @@ export function BetForm({ matchId, options, names }: Props) {
   useEffect(() => {
     try {
       const cached = localStorage.getItem(USERNAME_STORAGE_KEY);
+      // マウント後にブラウザのキャッシュから名前を復元（SSRでは不可のため）。
+      // 初回1回のみのクライアント初期化なので set-state-in-effect を許容。
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (cached) setName(cached);
     } catch {
       /* localStorage 不可環境は無視 */

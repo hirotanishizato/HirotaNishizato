@@ -26,6 +26,8 @@ export function Countdown({ kickoffIso, settled, className }: Props) {
   const [now, setNow] = useState<number | null>(null);
 
   useEffect(() => {
+    // 現在時刻はクライアント専用（SSRと一致させないためマウント後に開始）。
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setNow(Date.now());
     const id = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(id);

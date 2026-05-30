@@ -3,9 +3,8 @@
 // 注意: 本サイトは現実の金銭を賭けるものではありません。
 //   ポイント(架空の金額)を用いたゲーム性のための擬似ベッティングです。
 //
-// ローカル開発は SQLite。Vercel 等の本番では provider を "postgresql" に
-// 変更し DATABASE_URL を Postgres 接続文字列に差し替えてください（README参照）。
-// SQLite は enum 非対応のため、状態は String + 定数で表現しています。
+// DB は PostgreSQL（ローカル開発・本番(Render)とも同一でparityを確保）。
+// 状態は移植性のため enum ではなく String + 定数で表現しています。
 
 generator client {
   provider = "prisma-client"
@@ -13,7 +12,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
 }
 
 /// 試合（＝予想テーマ1件）
