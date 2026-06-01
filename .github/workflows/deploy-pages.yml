@@ -1,0 +1,49 @@
+# CROSS NAVI LP を GitHub Pages に公開するワークフロー
+# 公開URL（プロジェクトサイト）: https://hirotanishizato.github.io/HirotaNishizato/
+# サイトルート = crossmall-daiko-lp/ フォルダ（index.html がトップに表示されます）
+name: Deploy CROSS NAVI LP (Pages)
+
+on:
+  push:
+    branches:
+      - master
+      - claude/gallant-mccarthy-7YRBz
+    paths:
+      - "crossmall-daiko-lp/**"
+      - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch: # 手動実行も可能（Actions タブ → Run workflow）
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同時実行は最新のみ（古いデプロイはキャンセル）
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        # enablement: true → Pages 未設定でも可能ならソースを「GitHub Actions」に自動設定
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload artifact (LP フォルダをサイトルートに)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: crossmall-daiko-lp
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

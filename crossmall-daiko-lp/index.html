@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>クロスモール 設定・運用 まるごと代行｜CROSS NAVI（クロスナビ）by FANCAS</title>
+<meta name="description" content="複数モール一元管理ツール「クロスモール」の初期設定・在庫連携・受注運用をEC運営代行のプロが丸ごと代行。専門知識ゼロでも『使いこなせる状態』でお渡しします。月額3万円〜・最短2週間・契約縛りなし。">
+<meta property="og:title" content="クロスモール 設定・運用 まるごと代行｜CROSS NAVI">
+<meta property="og:description" content="クロスモールの『契約しただけ』を卒業。設定〜日々の運用まで、EC代行のプロにまるごとお任せ。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.className+=" js";</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="CROSS NAVI ホーム">
+      <span class="mark">CN</span>
+      <span>CROSS NAVI<small class="brand-sub">クロスモール設定・運用代行</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#pain">こんな方へ</a>
+      <a href="#service">サービス</a>
+      <a href="#reason">選ばれる理由</a>
+      <a href="#pricing">料金プラン</a>
+      <a href="#flow">導入の流れ</a>
+      <a href="#faq">よくある質問</a>
+      <a href="company.html">会社概要</a>
+      <a href="contact.html" class="btn btn--cta">無料相談する</a>
+    </nav>
+    <div class="header-cta">
+      <a href="contact.html" class="btn btn--cta">無料相談する</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">複数モール一元管理ツール「クロスモール」設定・運用代行</span>
+      <h1>
+        クロスモールの初期設定、<br>
+        <span class="hl">もう挫折しない。</span><br>
+        <span class="blue">「使いこなせる状態」</span>で、<br>あなたの手元へ。
+      </h1>
+      <p class="hero-lead">
+        楽天・Amazon・Yahoo!…複数店舗の在庫連携も受注処理も、専門知識ゼロでOK。
+        EC運営代行のプロが、面倒な設定から日々の運用まで“まるごと”引き受けます。
+      </p>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn btn--cta btn--lg">無料で相談する（30秒）</a>
+        <a href="#pricing" class="btn btn--ghost btn--lg">料金プランを見る</a>
+      </div>
+      <ul class="hero-badges">
+        <li><span class="ic">✓</span> 月額 3万円〜</li>
+        <li><span class="ic">✓</span> 最短2週間で運用開始</li>
+        <li><span class="ic">✓</span> 契約の縛りなし</li>
+        <li><span class="ic">✓</span> 導入前の相談もOK</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card__bar"><i></i><i></i><i></i><span>CROSS MALL ／ 在庫連携モニター</span></div>
+        <div class="hero-card__body">
+          <div class="sync-row">
+            <span class="mall"><span class="dot" style="background:#bf0000">R</span>楽天市場</span>
+            <span class="stock">在庫 12</span>
+            <span class="ok">✓ 自動同期</span>
+          </div>
+          <div class="sync-row">
+            <span class="mall"><span class="dot" style="background:#ff9900">A</span>Amazon</span>
+            <span class="stock">在庫 12</span>
+            <span class="ok">✓ 自動同期</span>
+          </div>
+          <div class="sync-row">
+            <span class="mall"><span class="dot" style="background:#ff0033">Y</span>Yahoo!</span>
+            <span class="stock">在庫 12</span>
+            <span class="ok">✓ 自動同期</span>
+          </div>
+          <div class="sync-row">
+            <span class="mall"><span class="dot" style="background:#11b5a0">EC</span>自社カート</span>
+            <span class="stock">在庫 12</span>
+            <span class="ok">✓ 自動同期</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float">
+        <div><span class="big">−92%</span></div>
+        <div><b>受注・在庫の作業時間</b><small>※設定最適化後の想定イメージ</small></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 対応モール strip -->
+  <div class="logo-strip">
+    <div class="container logo-strip__inner">
+      <span class="lbl">対応モール・カート（クロスモール連携）</span>
+      <span class="mall-chip">楽天市場</span>
+      <span class="mall-chip">Amazon</span>
+      <span class="mall-chip">Yahoo!ショッピング</span>
+      <span class="mall-chip">au PAY マーケット</span>
+      <span class="mall-chip">Qoo10</span>
+      <span class="mall-chip">BASE</span>
+      <span class="mall-chip">Shopify</span>
+      <span class="mall-chip">makeshop 他</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Pain ===== -->
+<section class="section section--soft" id="pain">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Pain — こんなお悩みありませんか？</span>
+      <h2>クロスモールの<span class="hl">「メリット」</span>が、<br>そのまま今の<span class="hl">「お困りごと」</span>になっていませんか？</h2>
+      <p>多店舗運営を効率化するはずのツール。でも、その効果を引き出す“設定”でつまずく方が後を絶ちません。</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="q">Q.</div>
+        <h3>在庫連携の設定が複雑で、売り越し・欠品が止まらない</h3>
+        <p>店舗ごとに在庫を手で直していて、注文が入るたびにヒヤヒヤ。気づけば「在庫切れなのに受注」が発生。</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="q">Q.</div>
+        <h3>商品マスタやCSVの作り方が分からず、初期設定で手が止まった</h3>
+        <p>カテゴリ登録、属性CSV、モールごとのフォーマット……。「どこから手をつければ？」のまま放置に。</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="q">Q.</div>
+        <h3>マニュアルがPDFばかりで、知りたいことが見つからない</h3>
+        <p>分厚いマニュアルを探し回っても、ピンポイントの答えが載っていない。問い合わせる時間もない。</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="q">Q.</div>
+        <h3>受注処理に追われて、本来やるべき販促に手が回らない</h3>
+        <p>毎日の出荷・メール対応で一日が終わる。新商品の企画も広告も、ずっと「後回し」のまま。</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="q">Q.</div>
+        <h3>専任のEC担当がいない。社長や少人数で兼任していて限界</h3>
+        <p>人を採用する余裕はない。でも今のやり方では、これ以上店舗もSKUも増やせない。</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="q">Q.</div>
+        <h3>ツールは契約したのに、結局エクセル管理に戻ってしまった</h3>
+        <p>月額は払い続けているのに、使いこなせず宝の持ち腐れ。「もったいない」と分かっているのに…。</p>
+      </div>
+    </div>
+
+    <div class="turn reveal">
+      <div class="arrow">▼</div>
+      <p>その原因は、ツールではなく<span class="hl">「設定と運用設計」</span>。<br>だから私たちが、<span class="hl">まるごと代行</span>します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Why it's hard ===== -->
+<section class="section" id="why-hard">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why — 自力導入が難しい3つの理由</span>
+      <h2>クロスモールが「高機能なのに、使いこなせない」<br>のには理由があります</h2>
+      <p>多機能で柔軟だからこそ、最初の設計を間違えると後で大きく崩れます。だからこそ“最初”が肝心です。</p>
+    </div>
+    <div class="hard-grid">
+      <div class="hard-card reveal">
+        <div class="num">REASON 01</div>
+        <h3>専門知識が前提</h3>
+        <p>商品マスタ設計、在庫連携ロジック、各モールのAPI・CSV仕様…。EC実務とIT両方の知識がないと、最適な設定にたどり着けません。</p>
+      </div>
+      <div class="hard-card reveal">
+        <div class="num">REASON 02</div>
+        <h3>マニュアルが探しにくい</h3>
+        <p>オンラインヘルプが乏しく、情報はPDF中心。「今やりたいこと」の答えに行き着くまでが遠く、自己流で詰まりがちです。</p>
+      </div>
+      <div class="hard-card reveal">
+        <div class="num">REASON 03</div>
+        <h3>自社フローへの“翻訳”が必要</h3>
+        <p>汎用ツールを、自社の商品・倉庫・出荷の流れに合わせて設計し直す工程が必須。ここを省くと運用が回りません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== What we do ===== -->
+<section class="section section--soft" id="service">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Service — できること</span>
+      <h2>「設定」だけじゃない。<span class="hl">「運用」まで</span>伴走します</h2>
+      <p>導入の入口から、日々の受注処理・改善まで。あなたの状況に合わせて、必要なところだけお任せいただけます。</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card reveal">
+        <div class="ic">⚙️</div>
+        <h3>初期設定・連携構築</h3>
+        <p>アカウント開設から店舗・倉庫・送料・支払の基本設定、各モール／カートのAPI・CSV連携まで丸ごと構築します。</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="ic">🔗</div>
+        <h3>在庫連携（売り越し防止）</h3>
+        <p>全店舗で在庫数を自動同期。少ない在庫でも欠品・売り越しを防ぎ、販売機会の損失を止めます。</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="ic">📦</div>
+        <h3>商品マスタ・一括登録</h3>
+        <p>カテゴリ・属性の設計から、CSVでの商品一括登録・複製まで代行。多SKUでも一気に立ち上げます。</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="ic">🧾</div>
+        <h3>受注フロー自動化</h3>
+        <p>ステータス管理・自動仕分け・帳票（納品書／送り状）・メールテンプレートを設定し、処理を最短化します。</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="ic">🤝</div>
+        <h3>日々の運用代行</h3>
+        <p>受注処理・在庫更新・新商品の追加登録など、日々のオペレーションを代行。本業に集中できます。</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="ic">📈</div>
+        <h3>分析・改善提案</h3>
+        <p>売上・在庫・受注データをレポート化。定例ミーティングで、次の一手まで一緒に考えます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Before / After ===== -->
+<section class="section" id="before-after">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Before / After</span>
+      <h2>代行を入れると、<span class="hl">運営はこう変わります</span></h2>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-card ba-before reveal">
+        <h3>😵 Before｜自力運用</h3>
+        <ul>
+          <li>在庫を店舗ごとに手入力、売り越しが頻発</li>
+          <li>商品登録は1モールずつ、丸一日がかり</li>
+          <li>設定が分からず機能の半分が眠ったまま</li>
+          <li>受注処理に追われ、販促はいつも後回し</li>
+          <li>担当が辞めたら運用が止まる属人化リスク</li>
+        </ul>
+      </div>
+      <div class="ba-arrow reveal">➜</div>
+      <div class="ba-card ba-after reveal">
+        <h3>😊 After｜CROSS NAVI 導入後</h3>
+        <ul>
+          <li>全店舗の在庫が自動同期、売り越しゼロへ</li>
+          <li>CSV一括登録で、新商品も全モール同時公開</li>
+          <li>機能をフル活用、ツールの価値を最大化</li>
+          <li>運用はお任せ、空いた時間を売上づくりへ</li>
+          <li>プロチームが伴走、属人化から解放</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Reasons (why us) ===== -->
+<section class="section section--navy" id="reason">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Reason — 選ばれる理由</span>
+      <h2>なぜ、<span class="hl">CROSS NAVI</span>が選ばれるのか</h2>
+      <p>「ツールに詳しい会社」ではなく、「EC運営そのものに詳しいチーム」が、あなたの代わりに手を動かします。</p>
+    </div>
+    <div class="reason-list">
+      <div class="reason-card reveal">
+        <div class="no">01</div>
+        <div>
+          <h3>EC運営代行のプロが実務対応</h3>
+          <p>楽天・Amazon・Yahoo!の運営・受注代行で培った実務知見を持つチームが対応。ツール設定だけでなく「売れる運営」まで分かっています。</p>
+        </div>
+      </div>
+      <div class="reason-card reveal">
+        <div class="no">02</div>
+        <div>
+          <h3>設定だけで終わらない“伴走型”</h3>
+          <p>「設定して納品して終わり」ではありません。運用が軌道に乗るまで、そして乗ってからも、継続して並走します。</p>
+        </div>
+      </div>
+      <div class="reason-card reveal">
+        <div class="no">03</div>
+        <div>
+          <h3>業務フローに合わせたオーダーメイド設計</h3>
+          <p>テンプレートの当てはめではなく、あなたの商品・倉庫・出荷フローに合わせて一から設計。だから現場で本当に回ります。</p>
+        </div>
+      </div>
+      <div class="reason-card reveal">
+        <div class="no">04</div>
+        <div>
+          <h3>最短2週間・縛りなしで始められる</h3>
+          <p>お問い合わせから最短2週間で運用開始。契約は月単位・縛りなし。スモールに始めて、必要に応じて広げられます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Pricing ===== -->
+<section class="section section--soft" id="pricing">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Pricing — 料金プラン</span>
+      <h2>必要な分だけ選べる、<span class="hl">3つのプラン</span></h2>
+      <p>「まず設定だけ」から「日々の運用まで丸ごと」まで。事業の状況に合わせてお選びいただけます。<br>金額は目安です。店舗数・商品点数・運用範囲により最適なお見積もりをご提案します。</p>
+    </div>
+
+    <div class="plan-grid">
+      <!-- Small -->
+      <div class="plan-card reveal">
+        <div class="plan-name">SMALL<small>スモール（ミニマム）プラン</small></div>
+        <div class="plan-catch">まずは“正しく動く状態”に。</div>
+        <div class="plan-price">
+          <span class="cur">¥</span><span class="num">30,000</span><span class="from">〜</span><span class="unit">／月（税抜）</span>
+        </div>
+        <p class="plan-desc">「自分で運用したい。でも初期設定だけはプロに任せたい」方へ。つまずきがちな土台づくりを代行します。</p>
+        <ul class="plan-features">
+          <li>無料相談・要件ヒアリング</li>
+          <li>アカウント開設・基本設定代行</li>
+          <li>在庫連携の初期設定（売り越し防止）</li>
+          <li>連携モール・カート 〜2店舗</li>
+          <li>商品マスタ雛形のご提供</li>
+          <li>操作レクチャー（1回）</li>
+          <li class="off">商品一括登録の代行</li>
+          <li class="off">日々の運用代行</li>
+        </ul>
+        <a href="contact.html?plan=small" class="btn btn--ghost btn--block">このプランで相談する</a>
+      </div>
+
+      <!-- Middle (featured) -->
+      <div class="plan-card is-featured reveal">
+        <div class="plan-badge">いちばん人気 ★</div>
+        <div class="plan-name">MIDDLE<small>ミドルプラン</small></div>
+        <div class="plan-catch">設定も運用も、二人三脚で。</div>
+        <div class="plan-price">
+          <span class="cur">¥</span><span class="num">100,000</span><span class="from">〜</span><span class="unit">／月（税抜）</span>
+        </div>
+        <p class="plan-desc">設定はフル代行、運用も部分的にサポート。「立ち上げてしっかり回したい」成長フェーズの定番プランです。</p>
+        <ul class="plan-features">
+          <li>SMALLの内容をすべて含む</li>
+          <li>初期設定フル代行（連携 〜5店舗）</li>
+          <li>商品マスタ・カテゴリ設計</li>
+          <li>商品一括登録 代行（〜500SKU）</li>
+          <li>受注フロー構築・帳票/メール設定</li>
+          <li>在庫更新・商品追加の継続代行</li>
+          <li>月次レポート＋定例MTG（月1回）</li>
+          <li>専任担当チャットサポート</li>
+        </ul>
+        <a href="contact.html?plan=middle" class="btn btn--cta btn--block">このプランで相談する</a>
+      </div>
+
+      <!-- Max -->
+      <div class="plan-card reveal">
+        <div class="plan-name">MAX<small>マックス（フル）プラン</small></div>
+        <div class="plan-catch">丸ごとお任せ、本業に集中。</div>
+        <div class="plan-price">
+          <span class="cur">¥</span><span class="num">300,000</span><span class="from">〜</span><span class="unit">／月（税抜）</span>
+        </div>
+        <p class="plan-desc">設定〜日々の運用〜改善まで、EC運営をフルアウトソース。「EC部門を社外にまるごと持つ」イメージです。</p>
+        <ul class="plan-features">
+          <li>MIDDLEの内容をすべて含む</li>
+          <li>連携モール・カート 無制限</li>
+          <li>商品一括登録 代行（SKU無制限）</li>
+          <li>日々の受注処理 フル運用代行</li>
+          <li>発注・仕入管理の設定/運用</li>
+          <li>週次レポート＋改善提案</li>
+          <li>定例MTG（隔週）・最優先サポート</li>
+          <li>電話＋専用チャット対応</li>
+        </ul>
+        <a href="contact.html?plan=max" class="btn btn--ghost btn--block">このプランで相談する</a>
+      </div>
+    </div>
+    <p class="price-note">※ 上記は税抜の目安金額です。別途、初期費用が発生する場合があります。最適なプラン・お見積もりは無料相談にてご提案します。</p>
+
+    <!-- Comparison table -->
+    <div class="compare-wrap reveal">
+      <div class="compare-title">プラン比較表</div>
+      <div class="compare-sub">対応できるサービス領域を一覧でチェック</div>
+      <p class="scroll-hint">← 横にスクロールできます →</p>
+      <div class="table-scroll">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th class="feat-head">サービス領域</th>
+              <th><span class="pn">SMALL</span><span class="pp">¥30,000〜/月</span></th>
+              <th class="col-mid"><span class="pn">MIDDLE</span><span class="pp">¥100,000〜/月</span></th>
+              <th><span class="pn">MAX</span><span class="pp">¥300,000〜/月</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="grp"><th>導入・初期設定</th><td></td><td class="col-mid-cell"></td><td></td></tr>
+            <tr><th>無料相談・要件ヒアリング</th><td class="yes">✓</td><td class="yes col-mid-cell">✓</td><td class="yes">✓</td></tr>
+            <tr><th>アカウント開設・基本設定代行</th><td class="yes">✓</td><td class="yes col-mid-cell">✓</td><td class="yes">✓</td></tr>
+            <tr><th>連携モール・カート数</th><td class="val">〜2店舗</td><td class="val col-mid-cell">〜5店舗</td><td class="val">無制限</td></tr>
+            <tr><th>在庫連携設定（売り越し・欠品防止）</th><td class="yes">✓</td><td class="yes col-mid-cell">✓</td><td class="yes">✓</td></tr>
+            <tr><th>商品マスタ・カテゴリ設計</th><td class="val">雛形提供</td><td class="yes col-mid-cell">✓</td><td class="yes">✓</td></tr>
+            <tr><th>商品一括登録（CSV作成・取込代行）</th><td class="no">—</td><td class="val col-mid-cell">〜500SKU</td><td class="val">無制限</td></tr>
+            <tr><th>受注フロー構築・自動化設定</th><td class="no">—</td><td class="yes col-mid-cell">✓</td><td class="yes">✓</td></tr>
+            <tr><th>帳票・メールテンプレート設定</th><td class="no">—</td><td class="yes col-mid-cell">✓</td><td class="yes">✓</td></tr>
+            <tr><th>発注・仕入管理の設定</th><td class="no">—</td><td class="val col-mid-cell">一部対応</td><td class="yes">✓</td></tr>
+
+            <tr class="grp"><th>運用・サポート</th><td></td><td class="col-mid-cell"></td><td></td></tr>
+            <tr><th>操作レクチャー（オンライン）</th><td class="val">1回</td><td class="val col-mid-cell">3回</td><td class="val">無制限</td></tr>
+            <tr><th>日々の受注処理 運用代行</th><td class="no">—</td><td class="val col-mid-cell">繁忙期スポット</td><td class="yes">✓ 日次フル</td></tr>
+            <tr><th>在庫更新・商品追加の継続代行</th><td class="no">—</td><td class="yes col-mid-cell">✓</td><td class="yes">✓</td></tr>
+            <tr><th>売上・在庫レポート／分析</th><td class="no">—</td><td class="val col-mid-cell">月次</td><td class="val">週次＋改善提案</td></tr>
+            <tr><th>定例ミーティング</th><td class="no">—</td><td class="val col-mid-cell">月1回</td><td class="val">隔週</td></tr>
+            <tr><th>専任担当サポート</th><td class="val">メール</td><td class="val col-mid-cell">チャット</td><td class="val">電話＋専用チャット</td></tr>
+            <tr><th>トラブル時の優先対応</th><td class="no">—</td><td class="yes col-mid-cell">✓</td><td class="yes">✓ 最優先</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="price-note">✓＝標準対応／「—」＝対象外（個別オプションで対応可能な場合があります）。記載のSKU数・店舗数・回数は目安です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Flow ===== -->
+<section class="section" id="flow">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Flow — 導入の流れ</span>
+      <h2>お問い合わせから<span class="hl">最短2週間</span>で運用開始</h2>
+      <p>難しい準備は不要。まずは現状を聞かせてください。あとはプロにお任せください。</p>
+    </div>
+    <div class="flow">
+      <div class="flow-step reveal">
+        <div class="step-no">1</div>
+        <h3>無料相談</h3>
+        <p>現状のお悩み・店舗数・商品点数をヒアリング。導入前でもOK。</p>
+        <span class="day">DAY 0</span>
+      </div>
+      <div class="flow-step reveal">
+        <div class="step-no">2</div>
+        <h3>現状診断・ご提案</h3>
+        <p>最適なプランと設定方針、お見積もりをご提示します。</p>
+        <span class="day">〜DAY 3</span>
+      </div>
+      <div class="flow-step reveal">
+        <div class="step-no">3</div>
+        <h3>初期設定・構築</h3>
+        <p>連携・在庫・商品・受注フローをまるごと設定します。</p>
+        <span class="day">〜DAY 10</span>
+      </div>
+      <div class="flow-step reveal">
+        <div class="step-no">4</div>
+        <h3>レクチャー・開始</h3>
+        <p>操作レクチャー後に運用スタート。並走しながら微調整。</p>
+        <span class="day">〜DAY 14</span>
+      </div>
+      <div class="flow-step reveal">
+        <div class="step-no">5</div>
+        <h3>運用・改善</h3>
+        <p>日々の運用代行と定例MTGで、継続的に改善します。</p>
+        <span class="day">ご契約中</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Testimonials (仮) ===== -->
+<section class="section section--soft" id="voice">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Voice — お客様の声</span>
+      <h2>導入された方の<span class="hl">声</span></h2>
+      <p>※ 掲載内容は仮の想定事例です。実際の導入事例は、公開許諾をいただいたものに順次差し替えます。</p>
+    </div>
+    <div class="voice-grid">
+      <div class="voice-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>「契約したまま半年放置していたクロスモールが、2週間でフル稼働。売り越しのクレームがゼロになりました。」</p>
+        <div class="who">
+          <div class="ava">A</div>
+          <div><b>アパレル雑貨ショップ 様</b><small>楽天・Amazon・自社EC 3店舗運営</small></div>
+        </div>
+      </div>
+      <div class="voice-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>「商品1,000点超のCSV登録をまる投げできて、本当に助かりました。自分でやっていたら何ヶ月かかったか…。」</p>
+        <div class="who">
+          <div class="ava">B</div>
+          <div><b>食品メーカー 様</b><small>多SKU・季節商品の入れ替えが多い</small></div>
+        </div>
+      </div>
+      <div class="voice-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>「受注処理ごと任せられるので、私たちは商品開発と販促に集中できています。EC部門が社外にできた感覚です。」</p>
+        <div class="who">
+          <div class="ava">C</div>
+          <div><b>インテリア専門店 様</b><small>少人数運営・MAXプラン利用</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQ — よくある質問</span>
+      <h2>よくある<span class="hl">ご質問</span></h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-q"><span class="qi">Q</span>クロスモールをまだ契約していなくても依頼できますか？<span class="chev">▼</span></button>
+        <div class="faq-a"><div class="faq-a__inner">はい、可能です。導入前のプラン選定・お申し込みのサポートから代行できます。「自社に合うかどうか」のご相談だけでも歓迎です。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="qi">Q</span>すでに自分で設定し始めて、途中で止まっています。途中からでも頼めますか？<span class="chev">▼</span></button>
+        <div class="faq-a"><div class="faq-a__inner">もちろん可能です。まず現状の設定状況を診断し、活かせる部分は活かしつつ、つまずいている箇所をリカバリーして運用に乗せます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="qi">Q</span>対応しているモール・カートは何ですか？<span class="chev">▼</span></button>
+        <div class="faq-a"><div class="faq-a__inner">楽天市場・Amazon・Yahoo!ショッピング・au PAYマーケット・Qoo10・BASE・Shopify・makeshopなど、クロスモールが連携対応している主要モール／カート全般に対応します。詳細はお問い合わせください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="qi">Q</span>料金がなぜ「個別見積もり」なのですか？<span class="chev">▼</span></button>
+        <div class="faq-a"><div class="faq-a__inner">店舗数・商品点数（SKU数）・運用代行の範囲によって最適な作業量が変わるためです。本ページのプランを目安に、無料相談で正式なお見積もりをご提示します。明朗会計で、後から不明瞭な追加費用を請求することはありません。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="qi">Q</span>最短でいつから運用を始められますか？<span class="chev">▼</span></button>
+        <div class="faq-a"><div class="faq-a__inner">お問い合わせから最短2週間で運用開始が可能です。店舗数や商品点数が多い場合は、スケジュールを調整のうえご提案します。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="qi">Q</span>契約期間の縛りはありますか？<span class="chev">▼</span></button>
+        <div class="faq-a"><div class="faq-a__inner">月単位のご契約で、長期の縛りはありません。解約は1ヶ月前のお申し出で承ります。まずはSMALLから小さく始めて、必要に応じて拡張いただけます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="qi">Q</span>クロスモール以外の一元管理ツールでも対応できますか？<span class="chev">▼</span></button>
+        <div class="faq-a"><div class="faq-a__inner">ネクストエンジン等、他の一元管理システムにも対応可能な場合があります。現在ご利用中・ご検討中のツールをお知らせください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="qi">Q</span>商品点数が非常に多いのですが、対応できますか？<span class="chev">▼</span></button>
+        <div class="faq-a"><div class="faq-a__inner">対応可能です。CSVでの一括登録・更新を活用し、SKU数が多くても効率的に立ち上げ・運用します。MAXプランではSKU数無制限で対応します。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="qi">Q</span>在庫の売り越しが頻発しています。本当に改善できますか？<span class="chev">▼</span></button>
+        <div class="faq-a"><div class="faq-a__inner">在庫連携の設定を最適化することで、全店舗の在庫数を自動同期し、売り越し・欠品を防ぎます。運用ルールまで含めて設計するので、再発しにくい仕組みをつくります。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA band ===== -->
+<section class="section section--navy cta-band" id="cta">
+  <div class="container">
+    <h2>「契約しただけ」のクロスモールを、<br>“売上をつくる武器”に変えませんか？</h2>
+    <p>ご相談・お見積もりは無料です。導入前のお悩み相談だけでも、お気軽にどうぞ。</p>
+    <div class="hero-cta">
+      <a href="contact.html" class="btn btn--cta btn--lg">無料で相談する（30秒）</a>
+      <a href="#pricing" class="btn btn--light btn--lg">料金プランをもう一度見る</a>
+    </div>
+    <p class="sub-contact">メールでのお問い合わせ： <a href="mailto:info@fancas.jp">info@fancas.jp</a></p>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand"><span class="mark">CN</span><span>CROSS NAVI</span></div>
+        <p>クロスモールの設定・運用をまるごと代行する、EC事業者のための伴走型サービスです。運営：FANCAS合同会社。</p>
+      </div>
+      <div class="footer-col">
+        <h4>サービス</h4>
+        <ul>
+          <li><a href="#service">できること</a></li>
+          <li><a href="#reason">選ばれる理由</a></li>
+          <li><a href="#pricing">料金プラン</a></li>
+          <li><a href="#flow">導入の流れ</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>会社情報</h4>
+        <ul>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="mailto:info@fancas.jp">info@fancas.jp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FANCAS合同会社 / CROSS NAVI. All rights reserved.</span>
+      <span class="links">
+        <a href="company.html">運営会社</a>
+        <a href="contact.html">お問い合わせ</a>
+      </span>
+    </div>
+  </div>
+  <div class="container" style="margin-top:16px;font-size:.72rem;color:#5a708a;line-height:1.7;">
+    ※「クロスモール（CROSS MALL）」は株式会社アイルの登録商標／サービスです。本サービスは同社公認の代行サービスではなく、独立した第三者によるEC運用代行サービスです。
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
