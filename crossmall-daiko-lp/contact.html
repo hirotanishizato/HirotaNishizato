@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ・無料相談｜CROSS NAVI（クロスモール設定・運用代行）</title>
+<meta name="description" content="クロスモールの設定・運用代行サービス CROSS NAVI へのお問い合わせ・無料相談はこちら。導入前のご相談だけでも歓迎です。">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.className+=" js";</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="CROSS NAVI ホーム">
+      <span class="mark">CN</span>
+      <span>CROSS NAVI<small class="brand-sub">クロスモール設定・運用代行</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html#service">サービス</a>
+      <a href="index.html#reason">選ばれる理由</a>
+      <a href="index.html#pricing">料金プラン</a>
+      <a href="index.html#flow">導入の流れ</a>
+      <a href="index.html#faq">よくある質問</a>
+      <a href="company.html">会社概要</a>
+      <a href="contact.html" class="btn btn--cta">無料相談する</a>
+    </nav>
+    <div class="header-cta">
+      <a href="index.html#pricing" class="btn btn--ghost" style="padding:11px 22px;font-size:.9rem;">料金を見る</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== Page hero ===== -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">HOME</a> ／ お問い合わせ</div>
+    <h1>お問い合わせ・無料相談</h1>
+    <p>「クロスモールを導入したいけど不安」「設定で止まっている」——どんな段階でもお気軽にご相談ください。</p>
+  </div>
+</section>
+
+<!-- ===== Form ===== -->
+<section class="section section--soft">
+  <div class="container">
+    <div class="form-wrap">
+      <div class="form-note">
+        ■ <b>この送信フォームはデモ（仮実装）です。</b> 現状は送信先サーバーに接続していないため、入力内容は送信されません。
+        実運用時は、フォーム送信先（メール通知・CRM連携など）の設定が別途必要です。お急ぎの場合は
+        <a href="mailto:info@fancas.jp" style="color:var(--blue);font-weight:700;">info@fancas.jp</a> まで直接ご連絡ください。
+      </div>
+
+      <form id="contactForm" novalidate>
+        <div class="form-row two">
+          <div>
+            <label for="company">会社名・屋号 <span class="req">必須</span></label>
+            <input class="form-control" type="text" id="company" name="company" placeholder="例）株式会社サンプル" required>
+          </div>
+          <div>
+            <label for="name">ご担当者名 <span class="req">必須</span></label>
+            <input class="form-control" type="text" id="name" name="name" placeholder="例）山田 太郎" required>
+          </div>
+        </div>
+
+        <div class="form-row two">
+          <div>
+            <label for="email">メールアドレス <span class="req">必須</span></label>
+            <input class="form-control" type="email" id="email" name="email" placeholder="例）info@example.com" required>
+          </div>
+          <div>
+            <label for="tel">電話番号 <span class="opt">任意</span></label>
+            <input class="form-control" type="tel" id="tel" name="tel" placeholder="例）03-1234-5678">
+          </div>
+        </div>
+
+        <div class="form-row two">
+          <div>
+            <label for="plan">ご希望プラン <span class="opt">任意</span></label>
+            <select class="form-control" id="plan" name="plan">
+              <option value="">選択してください</option>
+              <option value="small">SMALL（スモール／月額3万円〜）</option>
+              <option value="middle">MIDDLE（ミドル／月額10万円〜）</option>
+              <option value="max">MAX（マックス／月額30万円〜）</option>
+              <option value="undecided">まだ決めていない／相談したい</option>
+            </select>
+          </div>
+          <div>
+            <label for="status">クロスモールの利用状況 <span class="opt">任意</span></label>
+            <select class="form-control" id="status" name="status">
+              <option value="">選択してください</option>
+              <option value="not-yet">これから導入を検討している</option>
+              <option value="contracted">契約済みだが設定が進んでいない</option>
+              <option value="stuck">自分で設定したが途中で止まっている</option>
+              <option value="running">運用中だが改善・代行したい</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row two">
+          <div>
+            <label for="malls">運営中のモール・カート <span class="opt">任意</span></label>
+            <input class="form-control" type="text" id="malls" name="malls" placeholder="例）楽天・Amazon・自社EC">
+          </div>
+          <div>
+            <label for="sku">商品点数（SKU数）の目安 <span class="opt">任意</span></label>
+            <input class="form-control" type="text" id="sku" name="sku" placeholder="例）約500点">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="message">ご相談内容 <span class="req">必須</span></label>
+          <textarea class="form-control" id="message" name="message" placeholder="現状のお悩みやご質問など、お気軽にご記入ください。" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label class="form-check">
+            <input type="checkbox" id="agree" name="agree" required>
+            <span>個人情報の取り扱いに同意します。いただいた情報は、お問い合わせ対応の目的にのみ利用します。</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--cta btn--lg btn--block">この内容で送信する</button>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="ic">✓</div>
+        <h2 style="font-size:1.3rem;margin-bottom:10px;">送信ありがとうございます（デモ）</h2>
+        <p style="color:var(--muted);">本フォームはデモのため、実際には送信されていません。<br>実運用では、ご入力のメールアドレス宛に自動返信が届く設定を予定しています。</p>
+        <p style="margin-top:18px;"><a href="index.html" class="btn btn--ghost">トップページに戻る</a></p>
+      </div>
+    </div>
+
+    <!-- contact aside -->
+    <div class="contact-aside">
+      <div class="box">
+        <div class="ic">✉️</div>
+        <b>メール</b>
+        <span><a href="mailto:info@fancas.jp" style="color:var(--blue);">info@fancas.jp</a></span>
+      </div>
+      <div class="box">
+        <div class="ic">⏱️</div>
+        <b>返信目安</b>
+        <span>1〜2営業日以内</span>
+      </div>
+      <div class="box">
+        <div class="ic">💬</div>
+        <b>相談料</b>
+        <span>無料（導入前もOK）</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand"><span class="mark">CN</span><span>CROSS NAVI</span></div>
+        <p>クロスモールの設定・運用をまるごと代行する、EC事業者のための伴走型サービスです。運営：FANCAS合同会社。</p>
+      </div>
+      <div class="footer-col">
+        <h4>サービス</h4>
+        <ul>
+          <li><a href="index.html#service">できること</a></li>
+          <li><a href="index.html#reason">選ばれる理由</a></li>
+          <li><a href="index.html#pricing">料金プラン</a></li>
+          <li><a href="index.html#flow">導入の流れ</a></li>
+          <li><a href="index.html#faq">よくある質問</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>会社情報</h4>
+        <ul>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="mailto:info@fancas.jp">info@fancas.jp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FANCAS合同会社 / CROSS NAVI. All rights reserved.</span>
+      <span class="links">
+        <a href="company.html">運営会社</a>
+        <a href="contact.html">お問い合わせ</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
