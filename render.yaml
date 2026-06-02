@@ -41,3 +41,31 @@ services:
         generateValue: true # ランダムなシークレットを自動生成
       - key: NODE_VERSION
         value: "22"
+
+  # ───────────────────────────────────────────────────────────────
+  # Chatwork × Claude 連携ボット
+  #   Chatworkの「アカウントイベント → ご自身へのメンション」Webhookを受け、
+  #   メンションされた内容を Claude で処理して同じ部屋に返信する。
+  #   デプロイ後の Webhook URL は:
+  #     https://<このサービスのドメイン>/chatwork/webhook
+  - type: web
+    name: chatwork-claude-bot
+    runtime: node
+    plan: free # webhook受信のため本番は starter 以上を推奨（free はアイドルでスリープ）
+    rootDir: chatwork-claude-bot
+    region: singapore # 日本に近いリージョン
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: CHATWORK_API_TOKEN
+        sync: false # ダッシュボードで設定（再発行したトークンを入れる）
+      - key: CHATWORK_WEBHOOK_TOKEN
+        sync: false # Webhook作成後に表示される署名検証用トークン
+      - key: ANTHROPIC_API_KEY
+        sync: false # AnthropicコンソールのAPIキー
+      - key: CLAUDE_MODEL
+        value: "claude-sonnet-4-6" # 必要なら claude-opus-4-8 等に変更可
+      - key: NODE_VERSION
+        value: "22"
