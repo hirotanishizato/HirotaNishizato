@@ -1,0 +1,17 @@
+{
+  "name": "chatwork-claude-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Chatwork宛のメンションをClaudeで処理して自動返信するボット",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
